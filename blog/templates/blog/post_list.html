@@ -9,7 +9,17 @@
         <h1>Witam na stronie bloga!</h1>
         <h2>Blog o programowaniu!</h2>
         <h3>Autor: Strefa kursów</h3>
-        <h4>Wszystkie prawa zastzrerzone</h4>
+        <h4>Wszystkie prawa zastrzerzone</h4>
     </div>
+    {% comment "komentarz" %}
+    {% endcomment %}
+    {% for post in posts %}
+    <div>
+        <p>opublikowany: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a> </h2>
+        <em>{{ post.text }}</em>
+    </div>
+    {% endfor %}
+
 </body>
 </html>
